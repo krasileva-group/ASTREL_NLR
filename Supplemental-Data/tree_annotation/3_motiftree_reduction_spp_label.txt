@@ -1,0 +1,352 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+#SEPARATOR TAB
+SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,Monocot,Family
+
+#dataset color (can be changed later)
+COLOR,#ff0000
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES,0
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 5:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+
+LEGEND_TITLE,Reduced NLR Species
+LEGEND_SHAPES,1,1,1,1,1,1,1
+LEGEND_COLORS,#984ea3,#ff7f00,#a65628,#e41a1c,#4daf4a,#337eb8,#e7298a
+LEGEND_LABELS,Eel grass,Greater Duckweed,Lesser Duckweed ,Resurrection Grass, Maize,Genlisea, Utricularia
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip 
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+
+#Examples:
+#assign a red colored strip to leaf 9606, with label 'Human' (label is displayed in the mouseover popups)
+#9606 #ff0000 Human
+
+#assign a green, semi-transparent (alpha 0.5) strip to an internal node, without any label. If 'Show internal values' is set to 'No', this will only be displayed if the node is collapsed. 
+#9606|5664 rgba(0,255,0,0.5)
+SPO_Spipo8G0030200/118-389,#5dc0c1,Duckweed
+ZMAR_Zosma513g00070.1/1-258,#64d6ea,Eelgrass
+ZMAR_Zosma90g00040.1/144-454,#64d6ea,Eelgrass
+ZMAR_Zosma73g00190.1/31-196,#64d6ea,Eelgrass
+ZMAR_Zosma115g00350.1/143-483,#64d6ea,Eelgrass
+ZMAR_Zosma160g00400.1/113-431,#64d6ea,Eelgrass
+ZMAR_Zosma147g00160.1/1-291,#64d6ea,Eelgrass
+ZMAR_Zosma147g00120.1/51-368,#64d6ea,Eelgrass
+ZMAR_Zosma46g00470.1/58-336,#64d6ea,Eelgrass
+ZMAR_Zosma9g01570.1/50-370,#64d6ea,Eelgrass
+ZMAR_Zosma147g00170.1/1-291,#64d6ea,Eelgrass
+ZMAR_Zosma202g00090.1/11-226,#64d6ea,Eelgrass
+ZMAR_Zosma1597g00010.1/1-306,#64d6ea,Eelgrass
+ZMAR_Zosma408g00010.1/113-409,#64d6ea,Eelgrass
+ZMAR_Zosma220g00080.1/14-329,#64d6ea,Eelgrass
+ZMAR_Zosma82g00030.1/113-410,#64d6ea,Eelgrass
+ZMAR_Zosma326g00020.1/28-269,#64d6ea,Eelgrass
+ZMAR_Zosma143g00210.1/1-222,#64d6ea,Eelgrass
+ZMAR_Zosma48g00430.1/1-203,#64d6ea,Eelgrass
+SPO_Spipo14G0010000/146-480,#5dc0c1,Duckweed
+ZMAR_Zosma20g01310.1/1-328,#64d6ea,Eelgrass
+SPO_Spipo14G0051800/54-384,#5dc0c1,Duckweed
+SPO_Spipo14G0052000/1-329,#5dc0c1,Duckweed
+SPO_Spipo14G0051900/1-321,#5dc0c1,Duckweed
+SPO_Spipo10G0039300/1-328,#5dc0c1,Duckweed
+SPO_Spipo10G0039500/35-294,#5dc0c1,Duckweed
+SPO_Spipo10G0018800/35-378,#5dc0c1,Duckweed
+SPO_Spipo10G0039400/150-492,#5dc0c1,Duckweed
+SPO_Spipo10G0037500/149-490,#5dc0c1,Duckweed
+SPO_Spipo0G0153600/145-489,#5dc0c1,Duckweed
+SPO_Spipo10G0019000/150-494,#5dc0c1,Duckweed
+SPO_Spipo10G0039000/29-375,#5dc0c1,Duckweed
+SPO_Spipo10G0018500/121-254,#5dc0c1,Duckweed
+SPO_Spipo0G0132000/1-171,#5dc0c1,Duckweed
+SPO_Spipo10G0037200/131-471,#5dc0c1,Duckweed
+SPO_Spipo10G0036900/151-489,#5dc0c1,Duckweed
+SPO_Spipo10G0039200/149-494,#5dc0c1,Duckweed
+SPO_Spipo10G0037600/150-495,#5dc0c1,Duckweed
+SPO_Spipo10G0019100/150-493,#5dc0c1,Duckweed
+SPO_Spipo10G0018300/150-494,#5dc0c1,Duckweed
+SPO_Spipo0G0149200/38-351,#5dc0c1,Duckweed
+SPO_Spipo10G0037000/151-492,#5dc0c1,Duckweed
+SPO_Spipo10G0037700/149-492,#5dc0c1,Duckweed
+SPO_Spipo12G0027100/20-86,#5dc0c1,Duckweed
+SPO_Spipo13G0056200/164-327,#5dc0c1,Duckweed
+ZMAR_Zosma53g00050.1/170-395,#64d6ea,Eelgrass
+SPO_Spipo12G0024400/167-392,#5dc0c1,Duckweed
+ZMAR_Zosma31g00100.1/176-400,#64d6ea,Eelgrass
+ZMAR_Zosma15g01450.1/178-405,#64d6ea,Eelgrass
+SPO_Spipo14G0022300/140-449,#5dc0c1,Duckweed
+SPO_Spipo14G0022500/142-464,#5dc0c1,Duckweed
+Uunitig_736_632244_632852_unitig_736.g22391.t1_-1_CDS_875836115_21053_frame022374/68-102,#022d72,Utricularia
+ZMAR_Zosma213g00130.1/91-315,#64d6ea,Eelgrass
+SPO_Spipo26G0003100/113-450,#5dc0c1,Duckweed
+SPO_Spipo0G0069900/129-471,#5dc0c1,Duckweed
+SPO_Spipo26G0002800/153-495,#5dc0c1,Duckweed
+SPO_Spipo26G0002900/153-495,#5dc0c1,Duckweed
+ZMAR_Zosma264g00130.1/137-450,#64d6ea,Eelgrass
+ZMAR_Zosma106g00700.1/121-392,#64d6ea,Eelgrass
+ZMAR_Zosma223g00060.1/119-411,#64d6ea,Eelgrass
+ZMAR_Zosma176g00080.1/126-448,#64d6ea,Eelgrass
+ZMAR_Zosma223g00100.1/121-330,#64d6ea,Eelgrass
+ZMAR_Zosma2195g00010.1/7-153,#64d6ea,Eelgrass
+ZMAR_Zosma46g00640.1/163-486,#64d6ea,Eelgrass
+ZMAR_Zosma331g00140.1/58-381,#64d6ea,Eelgrass
+ZMAR_Zosma113g00680.1/76-399,#64d6ea,Eelgrass
+ZMAR_Zosma343g00010.1/59-382,#64d6ea,Eelgrass
+ZMAR_Zosma77g00800.1/149-481,#64d6ea,Eelgrass
+SPO_Spipo30G0005900/161-472,#5dc0c1,Duckweed
+SPO_Spipo22G0002400/128-436,#5dc0c1,Duckweed
+SPO_Spipo0G0128600/129-439,#5dc0c1,Duckweed
+SPO_Spipo22G0003600/115-369,#5dc0c1,Duckweed
+SPO_Spipo22G0003100/126-434,#5dc0c1,Duckweed
+SPO_Spipo22G0003300/126-433,#5dc0c1,Duckweed
+SPO_Spipo3G0069200/132-449,#5dc0c1,Duckweed
+SPO_Spipo3G0068100/140-474,#5dc0c1,Duckweed
+SPO_Spipo3G0068000/141-475,#5dc0c1,Duckweed
+SPO_Spipo3G0067900/97-417,#5dc0c1,Duckweed
+SPO_Spipo0G0080600/30-277,#5dc0c1,Duckweed
+SPO_Spipo0G0143200/33-365,#5dc0c1,Duckweed
+SPO_Spipo3G0066800/142-471,#5dc0c1,Duckweed
+SPO_Spipo3G0067500/122-238,#5dc0c1,Duckweed
+SPO_Spipo3G0066900/142-474,#5dc0c1,Duckweed
+ZMAR_Zosma74g00260.1/140-480,#64d6ea,Eelgrass
+Uunitig_749_618816_620392_unitig_749.g13342.t1_1_CDS_875844351_7571_frame08012/63-130,#022d72,Utricularia
+SPO_Spipo6G0005300/146-473,#5dc0c1,Duckweed
+SPO_Spipo6G0005200/155-483,#5dc0c1,Duckweed
+SPO_Spipo3G0047800/113-444,#5dc0c1,Duckweed
+SPO_Spipo3G0062800/148-475,#5dc0c1,Duckweed
+SPO_Spipo3G0062900/148-475,#5dc0c1,Duckweed
+ZMAR_Zosma91g00880.1/140-475,#64d6ea,Eelgrass
+ZMAR_Zosma87g01050.1/138-448,#64d6ea,Eelgrass
+ZMAR_Zosma87g00490.1/73-269,#64d6ea,Eelgrass
+ZMAR_Zosma87g00830.1/138-450,#64d6ea,Eelgrass
+ZMAR_Zosma87g00840.1/136-457,#64d6ea,Eelgrass
+ZMAR_Zosma87g00900.1/135-458,#64d6ea,Eelgrass
+ZMAR_Zosma87g00470.1/138-461,#64d6ea,Eelgrass
+ZMAR_Zosma87g00860.1/137-437,#64d6ea,Eelgrass
+ZMAR_Zosma58g01070.1/138-462,#64d6ea,Eelgrass
+Uunitig_52_1774453_1776184_unitig_52.g17189.t1_-1_CDS_875823799_22753_frame024174/79-264,#022d72,Utricularia
+SPO_Spipo12G0020900/158-508,#5dc0c1,Duckweed
+SPO_Spipo12G0016500/114-460,#5dc0c1,Duckweed
+SPO_Spipo12G0020800/159-504,#5dc0c1,Duckweed
+Uunitig_8_3288853_3290859_unitig_8.g4048.t1_-1_CDS_875849235_18179_frame019350/39-189,#022d72,Utricularia
+SPO_Spipo10G0028400/1-232,#5dc0c1,Duckweed
+SPO_Spipo10G0029700/138-481,#5dc0c1,Duckweed
+SPO_Spipo10G0029900/140-483,#5dc0c1,Duckweed
+SPO_Spipo12G0028700/139-475,#5dc0c1,Duckweed
+SPO_Spipo12G0027900/139-469,#5dc0c1,Duckweed
+SPO_Spipo12G0023600/139-474,#5dc0c1,Duckweed
+SPO_Spipo19G0036300/139-483,#5dc0c1,Duckweed
+SPO_Spipo12G0023500/99-443,#5dc0c1,Duckweed
+SPO_Spipo12G0023400/93-263,#5dc0c1,Duckweed
+SPO_Spipo12G0023300/139-483,#5dc0c1,Duckweed
+SPO_Spipo12G0023200/139-479,#5dc0c1,Duckweed
+SPO_Spipo0G0076200/141-390,#5dc0c1,Duckweed
+SPO_Spipo0G0183200/141-479,#5dc0c1,Duckweed
+SPO_Spipo0G0092400/140-274,#5dc0c1,Duckweed
+SPO_Spipo9G0058600/141-480,#5dc0c1,Duckweed
+SPO_Spipo9G0057900/1-110,#5dc0c1,Duckweed
+SPO_Spipo9G0057600/39-373,#5dc0c1,Duckweed
+SPO_Spipo9G0055100/141-438,#5dc0c1,Duckweed
+SPO_Spipo9G0058100/141-482,#5dc0c1,Duckweed
+GaureaKE529754_24_813_M569_07282_1_CDS_641672315_4315_frame04316/45-215,#095fea,Genlisea
+Uunitig_61_669575_671218_unitig_61.g26106.t1_1_CDS_875829459_23955_frame025451/1-226,#022d72,Utricularia
+GaureaKE528346_31237_34014_M569_04260_-1_CDS_641652949_8817_frame08818/126-462,#095fea,Genlisea
+GaureaKE531976_6408_7493_M569_11123_1_CDS_641695367_8512_frame08513/123-362,#095fea,Genlisea
+GaureaKE529810_1607_2653_M569_07400_-1_CDS_641673069_12488_frame012489/20-344,#095fea,Genlisea
+GaureaKE528008_1186_2232_M569_03461_1_CDS_641648306_9321_frame09322/13-346,#095fea,Genlisea
+GaureaKE530524_433_3582_M569_08671_-1_CDS_641681579_17083_frame017084/174-510,#095fea,Genlisea
+GaureaKE530769_2349_3299_M569_09132_1_CDS_641684625_2213_frame02214/1-317,#095fea,Genlisea
+GaureaKE527470_84_1521_M569_02162_-1_CDS_641640169_17014_frame017015/128-441,#095fea,Genlisea
+GaureaKE529449_1_423_M569_06661_1_CDS_641668333_14418_frame014419/1-141,#095fea,Genlisea
+GaureaKE531731_12_722_M569_10756_1_CDS_641694028_3975_frame03976/4-237,#095fea,Genlisea
+GaureaKE527376_6432_7154_M569_01948_1_CDS_641638801_7383_frame07384/1-239,#095fea,Genlisea
+GaureaKE527522_944_1696_M569_02292_1_CDS_641640968_15430_frame015431/1-246,#095fea,Genlisea
+GaureaKE527315_3_425_M569_01781_-1_CDS_641637761_2152_frame02153/1-141,#095fea,Genlisea
+GaureaKE531012_402_2366_M569_09562_1_CDS_641687557_2743_frame02744/1-271,#095fea,Genlisea
+SPO_Spipo8G0030200/118-389,#5dc0c1,Duckweed
+ZMAR_Zosma513g00070.1/1-258,#64d6ea,Eelgrass
+ZMAR_Zosma90g00040.1/144-454,#64d6ea,Eelgrass
+ZMAR_Zosma73g00190.1/31-196,#64d6ea,Eelgrass
+ZMAR_Zosma115g00350.1/143-483,#64d6ea,Eelgrass
+ZMAR_Zosma160g00400.1/113-431,#64d6ea,Eelgrass
+ZMAR_Zosma147g00160.1/1-291,#64d6ea,Eelgrass
+ZMAR_Zosma147g00120.1/51-368,#64d6ea,Eelgrass
+ZMAR_Zosma46g00470.1/58-336,#64d6ea,Eelgrass
+ZMAR_Zosma9g01570.1/50-370,#64d6ea,Eelgrass
+ZMAR_Zosma147g00170.1/1-291,#64d6ea,Eelgrass
+ZMAR_Zosma202g00090.1/11-226,#64d6ea,Eelgrass
+ZMAR_Zosma1597g00010.1/1-306,#64d6ea,Eelgrass
+ZMAR_Zosma408g00010.1/113-409,#64d6ea,Eelgrass
+ZMAR_Zosma220g00080.1/14-329,#64d6ea,Eelgrass
+ZMAR_Zosma82g00030.1/113-410,#64d6ea,Eelgrass
+ZMAR_Zosma326g00020.1/28-269,#64d6ea,Eelgrass
+ZMAR_Zosma143g00210.1/1-222,#64d6ea,Eelgrass
+ZMAR_Zosma48g00430.1/1-203,#64d6ea,Eelgrass
+SPO_Spipo14G0010000/146-480,#5dc0c1,Duckweed
+ZMAR_Zosma20g01310.1/1-328,#64d6ea,Eelgrass
+SPO_Spipo14G0051800/54-384,#5dc0c1,Duckweed
+SPO_Spipo14G0052000/1-329,#5dc0c1,Duckweed
+SPO_Spipo14G0051900/1-321,#5dc0c1,Duckweed
+SPO_Spipo10G0039300/1-328,#5dc0c1,Duckweed
+SPO_Spipo10G0039500/35-294,#5dc0c1,Duckweed
+SPO_Spipo10G0018800/35-378,#5dc0c1,Duckweed
+SPO_Spipo10G0039400/150-492,#5dc0c1,Duckweed
+SPO_Spipo10G0037500/149-490,#5dc0c1,Duckweed
+SPO_Spipo0G0153600/145-489,#5dc0c1,Duckweed
+SPO_Spipo10G0019000/150-494,#5dc0c1,Duckweed
+SPO_Spipo10G0039000/29-375,#5dc0c1,Duckweed
+SPO_Spipo10G0018500/121-254,#5dc0c1,Duckweed
+SPO_Spipo0G0132000/1-171,#5dc0c1,Duckweed
+SPO_Spipo10G0037200/131-471,#5dc0c1,Duckweed
+SPO_Spipo10G0036900/151-489,#5dc0c1,Duckweed
+SPO_Spipo10G0039200/149-494,#5dc0c1,Duckweed
+SPO_Spipo10G0037600/150-495,#5dc0c1,Duckweed
+SPO_Spipo10G0019100/150-493,#5dc0c1,Duckweed
+SPO_Spipo10G0018300/150-494,#5dc0c1,Duckweed
+SPO_Spipo0G0149200/38-351,#5dc0c1,Duckweed
+SPO_Spipo10G0037000/151-492,#5dc0c1,Duckweed
+SPO_Spipo10G0037700/149-492,#5dc0c1,Duckweed
+SPO_Spipo12G0027100/20-86,#5dc0c1,Duckweed
+SPO_Spipo13G0056200/164-327,#5dc0c1,Duckweed
+ZMAR_Zosma53g00050.1/170-395,#64d6ea,Eelgrass
+SPO_Spipo12G0024400/167-392,#5dc0c1,Duckweed
+ZMAR_Zosma31g00100.1/176-400,#64d6ea,Eelgrass
+ZMAR_Zosma15g01450.1/178-405,#64d6ea,Eelgrass
+SPO_Spipo14G0022300/140-449,#5dc0c1,Duckweed
+SPO_Spipo14G0022500/142-464,#5dc0c1,Duckweed
+Uunitig_736_632244_632852_unitig_736.g22391.t1_-1_CDS_875836115_21053_frame022374/68-102,#022d72,Utricularia
+ZMAR_Zosma213g00130.1/91-315,#64d6ea,Eelgrass
+SPO_Spipo26G0003100/113-450,#5dc0c1,Duckweed
+SPO_Spipo0G0069900/129-471,#5dc0c1,Duckweed
+SPO_Spipo26G0002800/153-495,#5dc0c1,Duckweed
+SPO_Spipo26G0002900/153-495,#5dc0c1,Duckweed
+ZMAR_Zosma264g00130.1/137-450,#64d6ea,Eelgrass
+ZMAR_Zosma106g00700.1/121-392,#64d6ea,Eelgrass
+ZMAR_Zosma223g00060.1/119-411,#64d6ea,Eelgrass
+ZMAR_Zosma176g00080.1/126-448,#64d6ea,Eelgrass
+ZMAR_Zosma223g00100.1/121-330,#64d6ea,Eelgrass
+ZMAR_Zosma2195g00010.1/7-153,#64d6ea,Eelgrass
+ZMAR_Zosma46g00640.1/163-486,#64d6ea,Eelgrass
+ZMAR_Zosma331g00140.1/58-381,#64d6ea,Eelgrass
+ZMAR_Zosma113g00680.1/76-399,#64d6ea,Eelgrass
+ZMAR_Zosma343g00010.1/59-382,#64d6ea,Eelgrass
+ZMAR_Zosma77g00800.1/149-481,#64d6ea,Eelgrass
+SPO_Spipo30G0005900/161-472,#5dc0c1,Duckweed
+SPO_Spipo22G0002400/128-436,#5dc0c1,Duckweed
+SPO_Spipo0G0128600/129-439,#5dc0c1,Duckweed
+SPO_Spipo22G0003600/115-369,#5dc0c1,Duckweed
+SPO_Spipo22G0003100/126-434,#5dc0c1,Duckweed
+SPO_Spipo22G0003300/126-433,#5dc0c1,Duckweed
+SPO_Spipo3G0069200/132-449,#5dc0c1,Duckweed
+SPO_Spipo3G0068100/140-474,#5dc0c1,Duckweed
+SPO_Spipo3G0068000/141-475,#5dc0c1,Duckweed
+SPO_Spipo3G0067900/97-417,#5dc0c1,Duckweed
+SPO_Spipo0G0080600/30-277,#5dc0c1,Duckweed
+SPO_Spipo0G0143200/33-365,#5dc0c1,Duckweed
+SPO_Spipo3G0066800/142-471,#5dc0c1,Duckweed
+SPO_Spipo3G0067500/122-238,#5dc0c1,Duckweed
+SPO_Spipo3G0066900/142-474,#5dc0c1,Duckweed
+ZMAR_Zosma74g00260.1/140-480,#64d6ea,Eelgrass
+Uunitig_749_618816_620392_unitig_749.g13342.t1_1_CDS_875844351_7571_frame08012/63-130,#022d72,Utricularia
+SPO_Spipo6G0005300/146-473,#5dc0c1,Duckweed
+SPO_Spipo6G0005200/155-483,#5dc0c1,Duckweed
+SPO_Spipo3G0047800/113-444,#5dc0c1,Duckweed
+SPO_Spipo3G0062800/148-475,#5dc0c1,Duckweed
+SPO_Spipo3G0062900/148-475,#5dc0c1,Duckweed
+ZMAR_Zosma91g00880.1/140-475,#64d6ea,Eelgrass
+ZMAR_Zosma87g01050.1/138-448,#64d6ea,Eelgrass
+ZMAR_Zosma87g00490.1/73-269,#64d6ea,Eelgrass
+ZMAR_Zosma87g00830.1/138-450,#64d6ea,Eelgrass
+ZMAR_Zosma87g00840.1/136-457,#64d6ea,Eelgrass
+ZMAR_Zosma87g00900.1/135-458,#64d6ea,Eelgrass
+ZMAR_Zosma87g00470.1/138-461,#64d6ea,Eelgrass
+ZMAR_Zosma87g00860.1/137-437,#64d6ea,Eelgrass
+ZMAR_Zosma58g01070.1/138-462,#64d6ea,Eelgrass
+Uunitig_52_1774453_1776184_unitig_52.g17189.t1_-1_CDS_875823799_22753_frame024174/79-264,#022d72,Utricularia
+SPO_Spipo12G0020900/158-508,#5dc0c1,Duckweed
+SPO_Spipo12G0016500/114-460,#5dc0c1,Duckweed
+SPO_Spipo12G0020800/159-504,#5dc0c1,Duckweed
+Uunitig_8_3288853_3290859_unitig_8.g4048.t1_-1_CDS_875849235_18179_frame019350/39-189,#022d72,Utricularia
+SPO_Spipo10G0028400/1-232,#5dc0c1,Duckweed
+SPO_Spipo10G0029700/138-481,#5dc0c1,Duckweed
+SPO_Spipo10G0029900/140-483,#5dc0c1,Duckweed
+SPO_Spipo12G0028700/139-475,#5dc0c1,Duckweed
+SPO_Spipo12G0027900/139-469,#5dc0c1,Duckweed
+SPO_Spipo12G0023600/139-474,#5dc0c1,Duckweed
+SPO_Spipo19G0036300/139-483,#5dc0c1,Duckweed
+SPO_Spipo12G0023500/99-443,#5dc0c1,Duckweed
+SPO_Spipo12G0023400/93-263,#5dc0c1,Duckweed
+SPO_Spipo12G0023300/139-483,#5dc0c1,Duckweed
+SPO_Spipo12G0023200/139-479,#5dc0c1,Duckweed
+SPO_Spipo0G0076200/141-390,#5dc0c1,Duckweed
+SPO_Spipo0G0183200/141-479,#5dc0c1,Duckweed
+SPO_Spipo0G0092400/140-274,#5dc0c1,Duckweed
+SPO_Spipo9G0058600/141-480,#5dc0c1,Duckweed
+SPO_Spipo9G0057900/1-110,#5dc0c1,Duckweed
+SPO_Spipo9G0057600/39-373,#5dc0c1,Duckweed
+SPO_Spipo9G0055100/141-438,#5dc0c1,Duckweed
+SPO_Spipo9G0058100/141-482,#5dc0c1,Duckweed
+GaureaKE529754_24_813_M569_07282_1_CDS_641672315_4315_frame04316/45-215,#095fea,Genlisea
+Uunitig_61_669575_671218_unitig_61.g26106.t1_1_CDS_875829459_23955_frame025451/1-226,#022d72,Utricularia
+GaureaKE528346_31237_34014_M569_04260_-1_CDS_641652949_8817_frame08818/126-462,#095fea,Genlisea
+GaureaKE531976_6408_7493_M569_11123_1_CDS_641695367_8512_frame08513/123-362,#095fea,Genlisea
+GaureaKE529810_1607_2653_M569_07400_-1_CDS_641673069_12488_frame012489/20-344,#095fea,Genlisea
+GaureaKE528008_1186_2232_M569_03461_1_CDS_641648306_9321_frame09322/13-346,#095fea,Genlisea
+GaureaKE530524_433_3582_M569_08671_-1_CDS_641681579_17083_frame017084/174-510,#095fea,Genlisea
+GaureaKE530769_2349_3299_M569_09132_1_CDS_641684625_2213_frame02214/1-317,#095fea,Genlisea
+GaureaKE527470_84_1521_M569_02162_-1_CDS_641640169_17014_frame017015/128-441,#095fea,Genlisea
+GaureaKE529449_1_423_M569_06661_1_CDS_641668333_14418_frame014419/1-141,#095fea,Genlisea
+GaureaKE531731_12_722_M569_10756_1_CDS_641694028_3975_frame03976/4-237,#095fea,Genlisea
+GaureaKE527376_6432_7154_M569_01948_1_CDS_641638801_7383_frame07384/1-239,#095fea,Genlisea
+GaureaKE527522_944_1696_M569_02292_1_CDS_641640968_15430_frame015431/1-246,#095fea,Genlisea
+GaureaKE527315_3_425_M569_01781_-1_CDS_641637761_2152_frame02153/1-141,#095fea,Genlisea
+GaureaKE531012_402_2366_M569_09562_1_CDS_641687557_2743_frame02744/1-271,#095fea,Genlisea
