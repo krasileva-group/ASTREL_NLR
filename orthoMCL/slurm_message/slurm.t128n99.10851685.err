@@ -1,5 +1,0 @@
-Bareword found where operator expected at /tgac/workarea/group-tg/projects/erinphd/script/processing_scripts/align.pl line 15, near ""mafft --quiet $inpath/temp/"Ortho_"
-	(Missing operator before Ortho_?)
-String found where operator expected at /tgac/workarea/group-tg/projects/erinphd/script/processing_scripts/align.pl line 15, near "Ortho_"$gene.pep > $inpath/aln/$gene\_aln.pep\n""
-syntax error at /tgac/workarea/group-tg/projects/erinphd/script/processing_scripts/align.pl line 15, near ""mafft --quiet $inpath/temp/"Ortho_"
-Execution of /tgac/workarea/group-tg/projects/erinphd/script/processing_scripts/align.pl aborted due to compilation errors.
