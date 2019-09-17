@@ -1,0 +1,2 @@
+grep '[m|1][m|1][m|1][m|1][m|1][m|1][m|1][m|1]00[m|1]' all_monocot_orthogroups.txt
+grep '[m|1][m|1][m|1][m|1][m|1][m|1][m|1][m|1][m|1]00' all_dicot_orthogroups.txt
